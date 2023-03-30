@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+:root {
+  --primary: #4F6603;
+  --primary-container: #d1ee81;
+  --on-primary-container: #161f00;
+  --secondary: #5b6147;
+  --secondary-container: #dfe6c4;
+  --background: #fefcf4;
+  --on-background: #1b1c17;
+  --on-primary: #ffffff;
+  --surface: #fefcf4;
+  --outline: #76786b;
+  --surfece-variant: #e3e4d4;
+  --on-suface-variant: #46483c;
+
+  --home-text-size: 1.2em;
+  --h1-text-size: 5em
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #b5d268;
+    --on-primary-container: #d1ee81;
+    --secondary: #c3caaa;
+    --secondary-container: #434931;
+    --background: #1b1c17;
+    --on-background: #e4e3db;
+    --on-primary: #283500;
+    --surface: #1b1c17;
+    --primary-container: #3b4d00;
+    --outline: #909284;
+    --surfece-variant: #46483c;
+    --on-suface-variant: #c6c8b8;
+  }
+
+  header .logo {
+    content: url(res/logo-dark.svg) !important;
+  }
+}
+
+header * {
+  color: var(--on-primary);
+  text-decoration: none;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: 'Roboto Mono', monospace;
+  scroll-behavior: smooth;
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 2rem;
+}
+
+header {
+  background-color: var(--primary);
+  position: fixed;
+  width: 100vw;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  content: url(res/logo.svg );
+  fill: var(--on-primary);
+  max-height: 3rem;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  margin: 1rem 0;
+}
+
+header button[aria-expanded=true]+nav {
+  display: block;
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  min-width: 75%;
+  display: none;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  min-height: fit-content;
+  min-width: fit-content;
+  display: flex;
+  gap: .3rem;
+  padding: 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.icon>span {
+  background-color: var(--on-primary);
+  height: 5px;
+  width: 25px;
+  border-radius: 10px;
+}
+
+main {
+  padding-top: 3rem;
+}
+
+.home-text-block:nth-child(even) {
+  background-color: var(--surfece-variant);
+  color: var(--on-suface-variant);
+}
+
+.home-text-block>.container {
+  padding: 3rem 0;
+  font-size: var(--home-text-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-text-block img {
+  width: 100%;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+ 
+#faq .title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+#faq p[aria-hidden="true"] {
+  display: none;
+}
+
+#product {
+  padding-top: 3rem;
+}
+
+#product img {
+  width: 100%;
+
+}
+
+.open-button {
+  background-color: var(--secondary-container);
+  border: none;
+  padding: 0;
+  min-height: fit-content;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.open-button div {
+  min-width: 1rem;
+  aspect-ratio: 1/1;
+  border-left: var(--secondary) solid 3px;
+  border-bottom: var(--secondary) solid 3px;
+  transform: rotate(-45deg) translateY(-2px) translateX(2px);
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: start;
+  margin: 3rem 0;
+}
+
+form input {
+  background-color: transparent;
+  border: var(--outline) 2px solid;
+  padding: 1rem;
+  border-radius: 1rem;
+  min-width: 100%;
+  color: var(--on-background);
+  font-family: 'Roboto Mono', monospace;
+}
+
+form button {
+  background-color: var(--primary-container);
+  border: none;
+  color: var(--on-primary-container);
+  padding: .8rem 1rem;
+  border-radius: 10rem;
+}
+
+h1 {
+  font-size: var(--h1-text-size);
+  text-align: center;
+}
+
+@media (min-width:961px)  {
+  .container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: end;
+
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+  }
+
+  .home-text-block .container {
+    display: flex;
+    flex-direction: row;
+    min-height: 20rem;
+    justify-content: space-between;
+  }
+
+  .home-text-block:nth-child(even) .container {
+    flex-direction: row-reverse;
+  }
+
+  .home-text-block img {
+    width: 15rem;
+  }
+
+  .home-text-block p {
+    width: 40%;
+  }
+
+  form input {
+    max-width: 3rem;
+  }
+}

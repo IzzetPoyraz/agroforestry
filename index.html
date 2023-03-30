@@ -1,25 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Agroforestry</title>
 </head>
+
 <body>
     <header>
-        <nav>
-            
-        </nav>
+        <div class="container">
+
+            <a href="./" aria-label="home" class="logo"></a>
+            <button aria-expanded="false" aria-label="menu" id="menu" class="hamburger">
+                <span aria-hidden="true" class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span>Menu</span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#inchrijven">Inschrijven</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
-    <main>
-        <section>
-            
+    <main id="home">
+
+        <section class="home-text-block">
+            <div class="container">
+                <img src="res/simon-wilkes-S297j2CsdlM-unsplash.jpg" alt="">
+                <p>
+                    Agroforestry of boslandbouw is een landbouwsysteem waar bomen of struiken gecombineerd worden met
+                    een landbouwgewas of landbouwdieren op eenzelfde perceel
+                </p>
+            </div>
         </section>
+        <section class="home-text-block">
+            <div class="container">
+                <img src="res/jon-moore-_2MyZDsUSM4-unsplash.jpg" alt="">
+                <p>
+                    Bij een goed werkend agroforestrysysteem hebben beide componenten een neutrale of positieve invloed
+                    op elkaar, en worden negatieve interacties zoveel mogelijk vermeden door een weldoordacht ontwerp
+                </p>
+            </div>
+        </section>
+        <section class="home-text-block">
+            <div class="container">
+                <img src="res/maria-labanda-7bhMtGJRq3w-unsplash.jpg" alt="">
+                <p>
+                    Agroforestry kan daarnaast ook ecosysteemdiensten leveren zoals koolstofopslag, schaduw voor vee of
+                    luchtzuivering.
+                </p>
+            </div>
+        </section>
+        <section class="home-text-block">
+            <div class="container">
+                <img src="res/geovanni-rodriguez-7Bpg6m36BNg-unsplash.jpg" alt="">
+                <p>
+                    Ben je benieuwd wat agroforestry nog meer is neem dan een kijkje op op onze site. Als je wilt weten
+                    welke stappen je moet ondernemen om aan agroforestry te doen bieden we ook een handige tool aan.
+                </p>
+            </div>
+        </section>
+        <section class="container">
+            <article id="product">
+                <h1>Product</h1>
+                <p>
+                    Een hadige tool waarme je in enkele klikken een kan weten of je akker geschikt is om aan
+                    agroforestry te doen.
+                </p>
+                <img src="res/image 1.png" alt="">
+                <p>
+                    Vul via onze tool enkele gegevens in zoals hoe breed je machines zijn en zie binnen no time
+                    resultaat.
+                </p>
+                <img src="res/forgen-stap-2.png" alt="">
+            </article>
+        </section>
+        <div class="container">
+            <section id="faq">
+                <h1>FAQ</h1>
+                
+                <article>
+                    <div class="title">
+                        <h2>Waarom moet ik maar zo weinig vragen beantwoorden</h2>
+                        <button class="open-button" aria-label="open question" aria-expanded="false">
+                            <div></div>
+                        </button>
+                    </div>
+                    <p aria-hidden="true">
+                        De reden dat we zo weinig info van je vragen is omdat we al veel info automatish kunnen ophalen
+                        als je je perseel kiest
+                    </p>
+                </article>
+                <article>
+                    <div class="title">
+                        <h2>Waarom moet ik maar zo weinig vragen beantwoorden</h2>
+                        <button class="open-button" aria-label="open question" aria-expanded="false">
+                            <div></div>
+                        </button>
+                    </div>
+                    <p aria-hidden="true">
+                        De reden dat we zo weinig info van je vragen is omdat we al veel info automatish kunnen ophalen
+                        als je je perseel kiest
+                    </p>
+                </article>
+            </section>
+        </div>
     </main>
     <footer>
-
+        <div class="container">
+            <h1 id="inschrijven">Inschrijven</h1>
+            <h2>Schrijf je in voor onze nieuwsbrief zodat je op de hoogte kan blijven van onze ontwikkeling.</h2>
+            <form>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <button>Inschrijven</button>
+            </form>
+        </div>
     </footer>
 </body>
+
 </html>
