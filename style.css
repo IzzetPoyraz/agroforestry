@@ -186,7 +186,8 @@ button:hover {
   cursor: pointer;
 }
 
-.open-button div {
+.open-button span {
+  display: block;
   min-width: 1rem;
   aspect-ratio: 1/1;
   border-left: var(--secondary) solid 3px;
