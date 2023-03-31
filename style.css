@@ -213,7 +213,7 @@ form input {
   font-family: 'Roboto Mono', monospace;
 }
 
-form button {
+form button, #product a {
   background-color: var(--primary-container);
   border: none;
   color: var(--on-primary-container);
@@ -224,6 +224,13 @@ form button {
 h1 {
   font-size: var(--h1-text-size);
   text-align: center;
+  overflow-wrap: break-word;
+}
+
+#product a {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
 }
 
 @media (min-width:961px)  {
